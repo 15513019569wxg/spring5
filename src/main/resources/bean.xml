@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置 User 对象创建-->
+<!--    <bean id="user" class="com.capensis.spring.User"/>-->
+
+    <!-- 使用命名空间为属性赋值 -->
+<!--    <bean id="book" class="com.capensis.spring.Book" p:bname="九阳神功" p:bauthor="无名氏"/>-->
+
+    <!-- 无参构造或者setter() -->
+    <bean id="book" class="com.capensis.spring.Book">
+        <!--
+            使用 property 完成属性注入
+                name：类里面属性名称
+                value：向属性注入的值
+        -->
+        <property name="bname" value="易筋经"/>
+        <property name="bauthor" value="达摩老祖"/>
+        <!-- 为属性address注入null值 !-->
+        <!--<property name="address"><null/></property>-->
+        <!-- 为属性注入带有特殊符号的值, 可以使用转义或者CDATA -->
+        <property name="address"><value><![CDATA[<<南京>>]]></value></property>
+    </bean>
+
+    <!-- 有参构造 -->
+    <bean id="orders" class="com.capensis.spring.Orders">
+        <constructor-arg name="oname" value="电脑"/>
+        <constructor-arg name="address" value="China"/>
+    </bean>
+
+</beans>
