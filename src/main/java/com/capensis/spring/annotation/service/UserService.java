@@ -18,11 +18,17 @@ import javax.annotation.Resource;
 public class UserService {
     @Value(value = "宋江")
     private String name;
-//    @Autowired
-//    @Qualifier(value = "userDaoImpl")
-//    @Resource
-    @Resource(name = "userDaoImpl")
-    private UserDao userDao;
+
+// @Autowired
+// @Qualifier(value = "userDaoImpl")
+// @Resource
+// @Resource(name = "userDaoImpl")
+// private UserDao userDao;
+private final UserDao userDao;
+
+    public UserService(@Qualifier(value = "userDaoImpl") UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     public void printMessage(){
         System.out.println("userService" + " :: " + name);

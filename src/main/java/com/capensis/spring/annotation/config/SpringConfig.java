@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @quotes 小不忍则乱大谋
  */
 @Configuration
-@ComponentScan(basePackages ={"com.capensis.spring.annotation"})
+@ComponentScan(basePackages = {"com.capensis.spring.annotation"})
 public class SpringConfig {
 }

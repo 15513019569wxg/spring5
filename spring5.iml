@@ -3,15 +3,11 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Bean3Cascade" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/bean3Cascade.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/annotation.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/autowire.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/bean2.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/bean3.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/collectiontype.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/externalfile.xml</file>
+        <fileset id="fileset" name="Bean1" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/capensis/spring/tx/bean1.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Bean2" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/capensis/spring/tx/bean2.xml</file>
         </fileset>
       </configuration>
     </facet>

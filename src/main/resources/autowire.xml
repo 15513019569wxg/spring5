@@ -2,14 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--利用byName自动注入-->
-    <bean id="emp" class="com.capensis.spring.autowire.Emp">
-        <!--<property name="dept" ref="dept"></property>-->
-        <property name="dept" ref="dept"/>
-    </bean>
-
-   <!-- <bean id="emp" class="com.capensis.spring.autowire.Emp" autowire="byType">
-        &lt;!&ndash;<property name="dept" ref="dept"></property>&ndash;&gt;
-    </bean>-->
+    <!--利用byName/byType自动注入-->
+    <bean id="emp" class="com.capensis.spring.autowire.Emp" autowire="byType"/>
     <bean id="dept" class="com.capensis.spring.autowire.Dept"/>
 </beans>

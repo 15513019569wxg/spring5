@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MyBookTest {
     @Test
     public void test() {
+        // ApplicationContext的实现类
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("lifecycle.xml");
         MyBook myBook = context.getBean("myBook", MyBook.class);
         System.out.println("第四步 获取创建 bean 实例对象");

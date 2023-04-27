@@ -1,7 +1,5 @@
 package com.capensis.spring.annotation.dao;
 
-import com.capensis.spring.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**

@@ -4,11 +4,11 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--配置 User 对象创建-->
-<!--    <bean id="user" class="com.capensis.spring.User"/>-->
+    <!--配置 Book2 对象创建-->
+    <bean id="user" class="com.capensis.spring.User"/>
 
     <!-- 使用命名空间为属性赋值 -->
-<!--    <bean id="book" class="com.capensis.spring.Book" p:bname="九阳神功" p:bauthor="无名氏"/>-->
+<!--    <bean id="book" class="com.capensis.spring.BookDao" p:bname="九阳神功" p:bauthor="无名氏"/>-->
 
     <!-- 无参构造或者setter() -->
     <bean id="book" class="com.capensis.spring.Book">
@@ -22,7 +22,9 @@
         <!-- 为属性address注入null值 !-->
         <!--<property name="address"><null/></property>-->
         <!-- 为属性注入带有特殊符号的值, 可以使用转义或者CDATA -->
-        <property name="address"><value><![CDATA[<<南京>>]]></value></property>
+        <property name="address">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
     </bean>
 
     <!-- 有参构造 -->
